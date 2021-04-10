@@ -1,0 +1,62 @@
+﻿@model Frontend_TDP.Models.Medicamento;
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Registro de medicamento</h1>
+
+<h4>Llenar los siguientes datos: </h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nombreMedicamento" class="control-label"></label>
+                <input asp-for="nombreMedicamento" class="form-control" required/>
+                <span asp-validation-for="nombreMedicamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fechaRecepcion" class="control-label"></label>
+                <input asp-for="fechaRecepcion" class="form-control" required/>
+                <span asp-validation-for="fechaRecepcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fechaVencimiento" class="control-label"></label>
+                <input asp-for="fechaVencimiento" class="form-control" required/>
+                <span asp-validation-for="fechaVencimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lote" class="control-label"></label>
+                <input asp-for="lote" class="form-control" required/>
+                <span asp-validation-for="lote" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cantidad" class="control-label"></label>
+                <input asp-for="cantidad" class="form-control" />
+                <span asp-validation-for="cantidad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="idProveedor" class="control-label"></label>
+
+                @Html.DropDownList("idProveedor", (IEnumerable<SelectListItem>)ViewBag.Proveedores, null, new { @class = "form-control" })
+
+                <span asp-validation-for="idProveedor" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Regresar a la lista</a>
+</div>
+

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Frontend_TDP.Models.Representante>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Representantes</h1>
+<br />
+<p>
+    <a href="/Representante/Create"><input type="button" class="btn btn-primary" value="Agregar"></a>
+</p>
+<table class="table table-bordered">
+    <thead class="table-dark text-center">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idRepresentante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefonoMovil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cargo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="text-center">
+            <td>
+                @Html.DisplayFor(modelItem => item.idRepresentante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefonoMovil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cargo)
+            </td>
+            <td>
+                <button type="button" value="Editar" class="btn btn-warning">
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+                </button>
+
+                <button type="button" value="Detalle" class="btn btn-info">
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
+                </button>
+
+                <button type="button" value="Eliminar" class="btn btn-danger">
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</nav>
