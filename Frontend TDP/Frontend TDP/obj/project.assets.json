@@ -8883,11 +8883,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Hola\\FrontEnd_LogicTrack\\Frontend TDP\\Frontend TDP\\Frontend TDP.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\TDP_FRONT\\LogicTracking_Frontend\\Frontend TDP\\Frontend TDP\\Frontend TDP.csproj",
       "projectName": "Frontend TDP",
-      "projectPath": "C:\\Users\\PC\\Desktop\\Hola\\FrontEnd_LogicTrack\\Frontend TDP\\Frontend TDP\\Frontend TDP.csproj",
+      "projectPath": "C:\\Users\\PC\\Desktop\\TDP_FRONT\\LogicTracking_Frontend\\Frontend TDP\\Frontend TDP\\Frontend TDP.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\Hola\\FrontEnd_LogicTrack\\Frontend TDP\\Frontend TDP\\obj\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\TDP_FRONT\\LogicTracking_Frontend\\Frontend TDP\\Frontend TDP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

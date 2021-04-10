@@ -8,45 +8,51 @@
 <h1>Medicamentos</h1>
 <br />
 <p>
-    <a href="/Medicamento/Create"><input type="button" class="btn btn-primary" value="Agregar"></a>
+    <a href="/Medicamento/Create"><input type="button" class="btn btn-primary" value="Crear medicamento"></a>
 </p>
 <table class="table table-bordered">
 	<thead class="table-dark text-center">
-		<tr>
-			<th>
-				@Html.DisplayNameFor(model => model.IdMedicamento)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.nombreMedicamento)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.fechaRecepcion)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.fechaVencimiento)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.lote)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.cantidad)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.idProveedor)
-			</th>
-
-			<th>
-				Acciones
-			</th>
-		</tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMedicamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreMedicamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaRecepcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechaVencimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idProveedor)
+            </th>
+            <th>
+                editar
+            </th>
+            <th>
+                eliminar
+            </th>
+        </tr>
 	</thead>
 	<tbody>
 		@foreach (var item in Model)
 		{
 			<tr class="text-center">
-				<td>
-					@Html.DisplayFor(modelItem => item.IdMedicamento)
-				</td>
+                <td>
+                    <button type="button" value="Details" class="btn btn-primary">
+                        @Html.ActionLink("-", "Details", new { id = item.IdMedicamento })
+                        @Html.DisplayFor(modelItem => item.IdMedicamento)
+                    </button>
+                    
+                </td>
 				<td>
 					@Html.DisplayFor(modelItem => item.nombreMedicamento)
 				</td>
@@ -66,16 +72,13 @@
 					@Html.DisplayFor(modelItem => item.idProveedor)
 				</td>
                 <td>
-                    <button type="button" value="Editar" class="btn btn-warning">
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+                    <button type="button" value="Editar" class="btn btn-outline-primary">
+                        @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ })
                     </button>
-
-                    <button type="button" value="Detalle" class="btn btn-info">
-                        @Html.ActionLink("Details", "Details", new { id = item.IdMedicamento })
-                    </button>
-
-                    <button type="button" value="Eliminar" class="btn btn-danger">
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+                <td>
+                    <button type="button" value="Eliminar" class="btn btn-outline-danger">
+                        @Html.ActionLink("Eliminar", "Delete", new { /* id=item.PrimaryKey */ })
                     </button>
                 </td>
 			</tr>

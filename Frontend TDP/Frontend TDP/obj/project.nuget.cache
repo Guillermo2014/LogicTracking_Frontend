@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UUChwfuRFoFDC6dX8wvVfbaCNGDSFZ3cJ5bdXQE7J1f5rMk3OnODVj/HAB71Fyej16AjROBChQd06yKaXFjjEg==",
+  "dgSpecHash": "VPdOfzCd+HU/ekat1unBqemQFfw7P4D6jr+jzmxzb9Crt/b83WskwCCrQjZMSU12+4PnOAPzxalQJWEorGQvZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\Desktop\\Hola\\FrontEnd_LogicTrack\\Frontend TDP\\Frontend TDP\\Frontend TDP.csproj",
+  "projectFilePath": "C:\\Users\\PC\\Desktop\\TDP_FRONT\\LogicTracking_Frontend\\Frontend TDP\\Frontend TDP\\Frontend TDP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

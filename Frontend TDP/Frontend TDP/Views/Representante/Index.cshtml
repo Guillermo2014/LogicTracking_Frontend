@@ -8,7 +8,7 @@
 <h1>Representantes</h1>
 <br />
 <p>
-    <a href="/Representante/Create"><input type="button" class="btn btn-primary" value="Agregar"></a>
+    <a href="/Representante/Create"><input type="button" class="btn btn-primary" value="Crear representante"></a>
 </p>
 <table class="table table-bordered">
     <thead class="table-dark text-center">
@@ -34,14 +34,22 @@
             <th>
                 @Html.DisplayNameFor(model => model.cargo)
             </th>
-            <th></th>
+            <th>
+                editar
+            </th>
+            <th>
+                eliminar
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr class="text-center">
             <td>
-                @Html.DisplayFor(modelItem => item.idRepresentante)
+                <button type="button" value="Detalle" class="btn btn-primary">
+                    @Html.ActionLink("-", "Details", new { /* id=item.PrimaryKey */ })
+                    @Html.DisplayFor(modelItem => item.idRepresentante)
+                </button>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.fechaCreacion)
@@ -62,15 +70,12 @@
                 @Html.DisplayFor(modelItem => item.cargo)
             </td>
             <td>
-                <button type="button" value="Editar" class="btn btn-warning">
+                <button type="button" value="Editar" class="btn btn-outline-primary">
                     @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
                 </button>
-
-                <button type="button" value="Detalle" class="btn btn-info">
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
-                </button>
-
-                <button type="button" value="Eliminar" class="btn btn-danger">
+            </td>
+            <td>
+                <button type="button" value="Eliminar" class="btn btn-outline-danger">
                     @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
                 </button>
             </td>

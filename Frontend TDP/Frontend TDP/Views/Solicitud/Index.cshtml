@@ -8,7 +8,7 @@
 <h1>Solicitudes</h1>
 <br />
 <p>
-    <a href="/Solicitud/Create"><input type="button" class="btn btn-primary" value="Agregar"></a>
+    <a href="/Solicitud/Create"><input type="button" class="btn btn-primary" value="Crear solicitud"></a>
 </p>
 <table class="table table-bordered">
     <thead class="table-dark text-center">
@@ -34,14 +34,22 @@
             <th>
                 @Html.DisplayNameFor(model => model.idRecepcionista)
             </th>
-            <th></th>
+            <th>
+                editar
+            </th>
+            <th>
+                eliminar
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr class="text-center">
             <td>
-                @Html.DisplayFor(modelItem => item.idDespacho)
+                <button type="button" value="Detalle" class="btn btn-primary">
+                    @Html.ActionLink("-", "Details", new { /* id=item.PrimaryKey */ })
+                    @Html.DisplayFor(modelItem => item.idDespacho)
+                </button>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.fechaCreacion)
@@ -62,16 +70,13 @@
                 @Html.DisplayFor(modelItem => item.idRecepcionista)
             </td>
             <td>
-                <button type="button" value="Editar" class="btn btn-warning">
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+                <button type="button" value="Editar" class="btn btn-outline-primary">
+                    @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ })
                 </button>
-
-                <button type="button" value="Detalle" class="btn btn-info">
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
-                </button>
-
-                <button type="button" value="Eliminar" class="btn btn-danger">
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+            <td>
+                <button type="button" value="Eliminar" class="btn btn-outline-danger">
+                    @Html.ActionLink("Eliminar", "Delete", new { /* id=item.PrimaryKey */ })
                 </button>
             </td>
         </tr>
