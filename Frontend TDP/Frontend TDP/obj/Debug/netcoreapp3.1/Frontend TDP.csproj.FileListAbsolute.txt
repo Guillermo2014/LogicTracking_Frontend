@@ -918,5 +918,3 @@ C:\Users\PC\Desktop\NUEVO_FRONT\LogicTracking_Frontend\Frontend TDP\Frontend TDP
 C:\Users\PC\Desktop\NUEVO_FRONT\LogicTracking_Frontend\Frontend TDP\Frontend TDP\obj\Debug\netcoreapp3.1\Frontend TDP.dll
 C:\Users\PC\Desktop\NUEVO_FRONT\LogicTracking_Frontend\Frontend TDP\Frontend TDP\obj\Debug\netcoreapp3.1\Frontend TDP.pdb
 C:\Users\PC\Desktop\NUEVO_FRONT\LogicTracking_Frontend\Frontend TDP\Frontend TDP\obj\Debug\netcoreapp3.1\Frontend TDP.genruntimeconfig.cache
-C:\Users\PC\Desktop\NUEVO_FRONT\LogicTracking_Frontend\Frontend TDP\Frontend TDP\obj\Debug\netcoreapp3.1\Razor\Views\Despacho\Index.cshtml.g.cs
-C:\Users\PC\Desktop\NUEVO_FRONT\LogicTracking_Frontend\Frontend TDP\Frontend TDP\obj\Debug\netcoreapp3.1\Razor\Views\Despacho\Details.cshtml.g.cs

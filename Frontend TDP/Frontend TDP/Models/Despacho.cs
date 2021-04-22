@@ -15,6 +15,7 @@ namespace Frontend_TDP.Models
         public string estado { get; set; }
         public int idSolicitante { get; set; }
         public int idRecepcionista { get; set; }
+        public int idTransportista { get; set; }
         public Cliente cliente { get; set; }
     }
 }
