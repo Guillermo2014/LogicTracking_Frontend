@@ -10,85 +10,89 @@
 <p>
     <a href="/Proveedor/Create"><input type="button" class="btn btn-primary" value="Crear proveedor"></a>
 </p>
-<table class="table table-bordered">
-    <thead class="table-dark text-center">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.idProveedor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.fechaCreacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.razonSocial)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.identificacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pais)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ciudad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.direccion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.representante.nombre)
-            </th>
-            <th>
-                editar
-            </th>
-            <th>
-                eliminar
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-		<tr class="text-center">
-            <td>
-                <button type="button" value="Detalle" class="btn btn-primary">
-                    @Html.ActionLink("-", "Details", new { /* id=item.PrimaryKey */ })
-                    @Html.DisplayFor(modelItem => item.idProveedor)
-                </button>
-            </td>
-			<td>
-				@Html.DisplayFor(modelItem => item.fechaCreacion)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.razonSocial)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.identificacion)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.pais)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.ciudad)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.direccion)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.representante.nombre)
-			</td>
-            <td>
-                <button type="button" value="Editar" class="btn btn-outline-primary">
-                    @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ })
-                </button>
-            </td>
-            <td>
-                <button type="button" value="Eliminar" class="btn btn-outline-danger">
-                    @Html.ActionLink("Eliminar", "Delete", new { /* id=item.PrimaryKey */ })
-                </button>
-            </td>
-		</tr>
-}
-    </tbody>
-</table>
+
+<div style="overflow-x:auto;">
+    <table class="table table-bordered table-sm table-striped" cellspacing="0" width="120%">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.idProveedor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.fechaCreacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.razonSocial)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.identificacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pais)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ciudad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.direccion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.representante.nombre)
+                </th>
+                <th>
+                    editar
+                </th>
+                <th>
+                    eliminar
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="text-center">
+                    <td>
+                        <button type="button" value="Detalle" class="btn btn-primary">
+                            @Html.ActionLink("-", "Details", new { /* id=item.PrimaryKey */ })
+                            @Html.DisplayFor(modelItem => item.idProveedor)
+                        </button>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fechaCreacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.razonSocial)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.identificacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.pais)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ciudad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.direccion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.representante.nombre)
+                    </td>
+                    <td>
+                        <button type="button" value="Editar" class="btn btn-outline-primary">
+                            @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ })
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" value="Eliminar" class="btn btn-outline-danger">
+                            @Html.ActionLink("Eliminar", "Delete", new { /* id=item.PrimaryKey */ })
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-end">

@@ -29,8 +29,6 @@ namespace Frontend_TDP.Controllers
             return View(solicituds);
         }
 
-
-
         public IActionResult Create()
         {
 

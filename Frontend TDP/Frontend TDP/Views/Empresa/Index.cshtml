@@ -10,79 +10,83 @@
     <!--<a asp-action="Create">Create New</a>-->
     <a href="/Empresa/Create"><input type="button" class="btn btn-primary" value="Crear empresa"></a>
 </p>
-<table class="table table-bordered">
-    <thead class="table-dark text-center">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.idEmpresaCliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.razonSocial)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.identificacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.departamento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ciudad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.direccion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.telefono)
-            </th>
-            <th>
-                editar
-            </th>
-            <th>
-                eliminar
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr class="text-center">
-            <td>
-                <button type="button" value="Details" class="btn btn-primary">
-                    @Html.ActionLink("-", "Details", new { id = item.idEmpresaCliente })
-                    @Html.DisplayFor(modelItem => item.idEmpresaCliente)
-                </button>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.razonSocial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.identificacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.departamento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ciudad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.direccion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.telefono)
-            </td>
-            <td>
-                <button type="button" value="Editar" class="btn btn-outline-primary">
-                    @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ })
-                </button>
-            </td>
-            <td>
-                <button type="button" value="Eliminar" class="btn btn-outline-danger">
-                    @Html.ActionLink("Eliminar", "Delete", new { /* id=item.PrimaryKey */ })
-                </button>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div style="overflow-x:auto;">
+    <table class="table table-bordered table-sm table-striped" cellspacing="0" width="120%">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.idEmpresaCliente)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.razonSocial)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.identificacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.departamento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ciudad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.direccion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.telefono)
+                </th>
+                <th>
+                    editar
+                </th>
+                <th>
+                    eliminar
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="text-center">
+                    <td>
+                        <button type="button" value="Details" class="btn btn-primary">
+                            @Html.ActionLink("-", "Details", new { id = item.idEmpresaCliente })
+                            @Html.DisplayFor(modelItem => item.idEmpresaCliente)
+                        </button>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.razonSocial)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.identificacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.departamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ciudad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.direccion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.telefono)
+                    </td>
+                    <td>
+                        <button type="button" value="Editar" class="btn btn-outline-primary">
+                            @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ })
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" value="Eliminar" class="btn btn-outline-danger">
+                            @Html.ActionLink("Eliminar", "Delete", new { /* id=item.PrimaryKey */ })
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-end">
